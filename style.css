@@ -1,0 +1,61 @@
+
+html, body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.title {
+    padding: 3%;
+}
+
+.container {
+    height: 80%;
+    display: flex;
+    margin: 3%;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.getInto {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+textarea {
+    width: 100%;
+    height: 100%;
+    padding: 2%;
+    border: none;
+    outline: none;
+}
+
+.button {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+#robot {
+    width: 50%;
+}
+
+.image { 
+    display: flex;
+    justify-content: space-around;
+}
+
+#copy {
+    padding: 1%;
+    display: none;
+}
