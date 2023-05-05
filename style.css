@@ -1,17 +1,36 @@
-
-html, body {
+html,
+body {
     height: 100vh;
     width: 100vw;
+    background-color: #bbb4f3;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .title {
-    padding: 3%;
+    padding: 3% 0 1% 3%;
+    font-size: 170%;
+}
+
+.encriptador {
+    font-family: 'Anton', sans-serif;
+}
+
+.de {
+    font-family: 'Jost', sans-serif;
+    display: inline;
+    margin: 1%;
+}
+
+.texto {
+    font-family: 'Dancing Script', cursive;
+    display: inline;
+    font-size: 180%;
 }
 
 .container {
-    height: 80%;
+    height: 70%;
     display: flex;
-    padding: 3%;
 }
 
 .left {
@@ -21,18 +40,19 @@ html, body {
 }
 
 .getInto {
-    width: 100%;
-    height: 90%;
+    width: 90%;
+    height: 75%;
     display: flex;
     justify-content: center;
 }
 
 textarea {
-    width: 100%;
-    height: 100%;
-    padding: 2%;
+    width: 90%;
+    padding: 1rem;
     border: none;
     outline: none;
+    border-radius: 40px;
+    margin-left: 1rem;
 }
 
 .button {
@@ -40,7 +60,77 @@ textarea {
     justify-content: space-evenly;
 }
 
+.btn_animated_encriptar,
+.btn_animated_desencriptar {
+    border-radius: 10px;
+    height: 5%;
+    width: 35%;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #a69cf4;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
+    /*font-size: 1.2rem;*/
+}
+
+.btn_animated_encriptar:hover,
+.btn_animated_desencriptar:hover {
+    scale: 1.1;
+}
+
+.btn_animated_encriptar.animate,
+.btn_animated_desencriptar.animate {
+    -webkit-animation: jello-horizontal 0.5s both;
+    animation: jello-horizontal 0.5s both;
+}
+
+@-webkit-keyframes jello-horizontal {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+        -webkit-transform: scale3d(1.25, 0.75, 1);
+        transform: scale3d(1.25, 0.75, 1);
+    }
+
+    40% {
+        -webkit-transform: scale3d(0.75, 1.25, 1);
+        transform: scale3d(0.75, 1.25, 1);
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.15, 0.85, 1);
+        transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+        -webkit-transform: scale3d(0.95, 1.05, 1);
+        transform: scale3d(0.95, 1.05, 1);
+    }
+
+    75% {
+        -webkit-transform: scale3d(1.05, 0.95, 1);
+        transform: scale3d(1.05, 0.95, 1);
+    }
+
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+
+
+
 .right {
+    position: absolute;
+    top: 3rem;
+    right: 5px;
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -48,17 +138,22 @@ textarea {
 
 .right button {
     padding: 10px;
-    background: #5784f5;
-    color: #fff;
+    background: none;
     font-size: 18px;
     border: none;
     outline: none;
-    border-radius: 10px;
+    border-radius: 40px;
     cursor: pointer;
+    position: relative;
+    right: 2rem;
+    top: 1.5rem;
 }
 
-.right button:active {
-    background: #809ce2;
+.right button img:active {
+    /*background: #809ce2;*/
+    background: rgb(214, 214, 241);
+    border-radius: 10px;
+
 }
 
 #robot {
@@ -66,11 +161,11 @@ textarea {
 }
 
 #robot2 {
-    width: 50%;
+    width: 60%;
     display: none;
 }
 
-.image { 
+.image {
     display: flex;
     justify-content: space-around;
 }
@@ -78,4 +173,48 @@ textarea {
 #copy {
     padding: 1%;
     display: none;
+}
+
+.box {
+    padding: 20px;
+    text-align: center;
+    margin: 20px auto;
+    width: 94%;
+    background-color: none;
+    box-shadow: 0 0 25px -8px rgba(0, 0, 0, 0.185);
+    border-radius: 15px;
+    border: 12px;
+}
+
+
+@media (max-width: 425px) {
+    .button {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn_animated_encriptar,
+    .btn_animated_desencriptar {
+        width: auto;
+        margin: 0 1rem;
+    }
+
+    #copy {
+        width: 20px;
+        height: 20px;
+    }
+
+    #robot {
+        width: 125%;
+    }
+
+    #robot2 {
+        width: 150%;
+    }
+}
+
+@media (min-width: 768px) {
+    .getInto {
+        margin: 1rem;
+    }
 }

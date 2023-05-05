@@ -38,7 +38,17 @@ function copiar() {
     var contenido = document.getElementById("result").textContent;
     console.log({contenido});
     navigator.clipboard.writeText(contenido);
-    alert("Se copio");
-    document.getElementById("textarea").value = "";
-    
+    //alert("Se copio");
 }
+
+const btn1 = document.querySelector('.btn_animated_encriptar')
+btn1.addEventListener('click', () => {
+  btn1.classList.remove('animate')
+  setTimeout(() => btn1.classList.add('animate'), 100)
+})
+
+const btn = document.querySelector('.btn_animated_desencriptar')
+btn.addEventListener('click', () => {
+  btn.classList.remove('animate')
+  setTimeout(() => btn.classList.add('animate'), 100)
+})

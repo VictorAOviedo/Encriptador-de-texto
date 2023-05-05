@@ -7,24 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script&family=Jost:wght@300&family=Poppins:wght@300&display=swap"
+        rel="stylesheet">
     <title>Encriptador</title>
 </head>
 
 <body>
     <div class="title">
-        <h1>Encriptador de texto</h1>
+        <h1 class="encriptador">Encriptador</h1>
+        <h2 class="de">de</h2>
+        <h1 class="texto">texto</h1>
     </div>
 
     <div class="container">
 
         <div class="left">
-            <div class="getInto">              
+            <div class="getInto">
                 <textarea name="text" id="textarea" cols="30" rows="10" placeholder="Escriba el texto aqui"></textarea>
             </div>
-            
+
             <div class="button">
-                <button onClick="encriptar()">Encriptar</button>
-                <button onclick="desencriptar()">Desencriptar</button>
+                <button class="btn_animated_encriptar" id="btn1" onClick="encriptar()">Encriptar</button>
+                <button class="btn_animated_desencriptar" id="btn2" onclick="desencriptar()">Desencriptar</button>
             </div>
         </div>
 
@@ -33,15 +40,18 @@
                 <img src="../Encriptador/asset/robot.png" alt="robot" id="robot">
                 <img src="../Encriptador/asset/robot2.png" alt="robot" id="robot2">
             </div>
-            <div class="getInto">
-                <textarea name="resultado" id="result" cols="30" rows="10" placeholder="resultado"></textarea>
+            <div class="getInto textCopy">
+                <div class="box" id="result" aria-placeholder="resultado"></div>
+                <button id="copy" type="button" onClick="copiar()"> <img
+                        src="../Encriptador/asset/content_copy_FILL0_wght400_GRAD0_opsz48.svg" alt=""> </button>
             </div>
-            <button id="copy" type="button" onClick="copiar()"> <img src="../Encriptador/asset/clipboard.svg" alt=""> </button>
+
         </div>
 
     </div>
 
 </body>
+
 </html>
 
 <script type="text/javascript" src="script.js"></script>
