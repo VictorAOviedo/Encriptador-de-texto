@@ -11,7 +11,7 @@ html, body {
 .container {
     height: 80%;
     display: flex;
-    margin: 3%;
+    padding: 3%;
 }
 
 .left {
@@ -46,8 +46,28 @@ textarea {
     width: 50%;
 }
 
+.right button {
+    padding: 10px;
+    background: #5784f5;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.right button:active {
+    background: #809ce2;
+}
+
 #robot {
     width: 50%;
+}
+
+#robot2 {
+    width: 50%;
+    display: none;
 }
 
 .image { 

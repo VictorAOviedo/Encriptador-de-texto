@@ -23,23 +23,25 @@
             </div>
             
             <div class="button">
-                <button>Encriptar</button>
-                <button>Desencriptar</button>
+                <button onClick="encriptar()">Encriptar</button>
+                <button onclick="desencriptar()">Desencriptar</button>
             </div>
         </div>
 
         <div class="right">
             <div class="image">
-                <img src="../Encriptador/asset/robot (1).png" alt="robot" id="robot">
+                <img src="../Encriptador/asset/robot.png" alt="robot" id="robot">
+                <img src="../Encriptador/asset/robot2.png" alt="robot" id="robot2">
             </div>
             <div class="getInto">
                 <textarea name="resultado" id="result" cols="30" rows="10" placeholder="resultado"></textarea>
             </div>
-            <button id="copy" >copiar</button>
+            <button id="copy" type="button" onClick="copiar()"> <img src="../Encriptador/asset/clipboard.svg" alt=""> </button>
         </div>
 
     </div>
 
 </body>
-
 </html>
+
+<script type="text/javascript" src="script.js"></script>
