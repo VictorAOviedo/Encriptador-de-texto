@@ -11,7 +11,7 @@ function encriptar() {
     document.getElementById("result").innerHTML = textCifrado;
     document.getElementById("robot2").style.display = "show";
     document.getElementById("robot2").style.display = "flex";
-    document.getElementById("copy").style.display = "show";
+    /*document.getElementById("copy").style.display = "show";*/
     document.getElementById("copy").style.display = "flex";
     document.getElementById("textarea").value = "";
 
@@ -26,9 +26,10 @@ function desencriptar() {
     var textCifrado = textCifrado.replace(/ai/igm,"a");
     var textCifrado = textCifrado.replace(/ufat/igm,"u");
 
-    document.getElementById("robot").style.display = "none";
+    document.getElementById("robot2").style.display = "none";
+    document.getElementById("robot").style.display = "flex";
     document.getElementById("result").innerHTML = textCifrado;
-    document.getElementById("copy").style.display = "show";
+    /*document.getElementById("copy").style.display = "show";*/
     document.getElementById("copy").style.display = "flex";
     document.getElementById("textarea").value = "";
 

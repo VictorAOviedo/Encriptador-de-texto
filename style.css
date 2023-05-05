@@ -173,6 +173,8 @@ textarea {
 #copy {
     padding: 1%;
     display: none;
+    width: 20px;
+    height: 20px;
 }
 
 .box {
@@ -199,10 +201,7 @@ textarea {
         margin: 0 1rem;
     }
 
-    #copy {
-        width: 20px;
-        height: 20px;
-    }
+    
 
     #robot {
         width: 125%;
